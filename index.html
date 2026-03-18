@@ -574,9 +574,12 @@
 
   const SOP_ICON = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M6 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M9 2h5m0 0v5m0-5L8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
+  const STATUS_ORDER = { live: 0, beta: 1, indev: 2, coming: 3 };
+
   function renderCards(tools) {
     const grid = document.getElementById("cardGrid");
     grid.innerHTML = "";
+    tools = [...tools].sort((a, b) => (STATUS_ORDER[a.status] ?? 9) - (STATUS_ORDER[b.status] ?? 9));
     tools.forEach(tool => {
       const statusClass = { live: "status-live", beta: "status-beta", coming: "status-coming", indev: "status-indev" }[tool.status] || "status-coming";
       const statusLabel = { live: "Live", beta: "Beta", coming: "Coming Soon", indev: "In Dev" }[tool.status] || "Coming Soon";

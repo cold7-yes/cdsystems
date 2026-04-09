@@ -102,16 +102,21 @@ export default function Home() {
         </div>
       </motion.div>
 
-      {/* Top-right operator identity */}
+      {/* Top-right "Let's Connect" CTA — primary action on the home page */}
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: booted ? 1 : 0 }}
         transition={{ duration: 0.4, delay: 0.2 }}
         onClick={() => setShowOperator(true)}
-        className="absolute top-6 right-6 z-40 flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.03] px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-white/50 transition-colors hover:border-white/30 hover:bg-white/[0.06] hover:text-white/90"
+        className="group absolute top-6 right-6 z-40 flex items-center gap-2 overflow-hidden rounded-md border border-green-400/60 bg-green-400/[0.08] px-4 py-2 font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-green-300 shadow-[0_0_24px_rgba(74,222,128,0.2)] transition-all duration-300 hover:border-green-400 hover:bg-green-400/[0.14] hover:text-white hover:shadow-[0_0_32px_rgba(74,222,128,0.4)]"
       >
-        <span className="inline-block h-1.5 w-1.5 rounded-full bg-sky-400" />
-        operator · {OPERATOR_NAME}
+        {/* Ambient pulse ring — subtle "click me" hint */}
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 rounded-md border border-green-400/0 animate-[connectPulse_3s_ease-in-out_infinite]"
+        />
+        <Mail size={13} className="relative" />
+        <span className="relative">Let&apos;s Connect</span>
       </motion.button>
 
       {/* Bottom-left event log */}

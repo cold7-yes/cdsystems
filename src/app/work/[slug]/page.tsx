@@ -170,6 +170,40 @@ export default async function CaseStudyPage({
                 </p>
               </section>
             )}
+
+            {/* Gallery */}
+            {cs.gallery && cs.gallery.length > 0 && (
+              <section className="mb-12">
+                <h2 className="mb-6 text-xs font-medium uppercase tracking-[0.15em] text-neutral-500">
+                  Workflows
+                </h2>
+                <div className="flex flex-col gap-6">
+                  {cs.gallery.map((img, i) => {
+                    if (!img.asset) return null;
+                    const src = urlFor(img).width(1400).fit("max").url();
+                    return (
+                      <figure key={i}>
+                        <div className="overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900">
+                          <Image
+                            src={src}
+                            alt={img.alt ?? `Workflow screenshot ${i + 1}`}
+                            width={1400}
+                            height={700}
+                            sizes="(min-width: 1024px) 640px, 100vw"
+                            className="h-auto w-full object-contain"
+                          />
+                        </div>
+                        {img.caption && (
+                          <figcaption className="mt-2 text-sm text-neutral-500">
+                            {img.caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  })}
+                </div>
+              </section>
+            )}
           </div>
 
           {/* Sidebar */}

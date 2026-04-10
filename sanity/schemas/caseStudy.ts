@@ -75,11 +75,32 @@ export const caseStudy = defineType({
     }),
     defineField({
       name: "thumbnail",
-      title: "Thumbnail (optional)",
+      title: "Thumbnail (card image)",
       type: "image",
+      description: "Main image shown on the homepage card.",
       options: { hotspot: true },
       fields: [
         defineField({ name: "alt", title: "Alt text", type: "string" }),
+      ],
+    }),
+    defineField({
+      name: "gallery",
+      title: "Gallery",
+      type: "array",
+      description: "Additional images shown on the case study detail page (workflow screenshots, diagrams, etc.)",
+      of: [
+        {
+          type: "image",
+          options: { hotspot: true },
+          fields: [
+            defineField({ name: "alt", title: "Alt text", type: "string" }),
+            defineField({
+              name: "caption",
+              title: "Caption (optional)",
+              type: "string",
+            }),
+          ],
+        },
       ],
     }),
     defineField({

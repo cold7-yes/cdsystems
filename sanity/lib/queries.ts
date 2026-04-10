@@ -28,7 +28,12 @@ export const caseStudyBySlugQuery = groq`
     whatWasBuilt,
     toolsUsed,
     status,
-    thumbnail
+    thumbnail,
+    gallery[] {
+      asset,
+      alt,
+      caption
+    }
   }
 `;
 
@@ -59,6 +64,11 @@ export interface CaseStudy {
     asset?: { _ref: string };
     alt?: string;
   };
+  gallery?: {
+    asset?: { _ref: string };
+    alt?: string;
+    caption?: string;
+  }[];
 }
 
 export interface Testimonial {

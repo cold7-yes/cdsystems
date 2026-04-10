@@ -25,13 +25,17 @@ export function Header() {
           </span>
         </Link>
         <div className="hidden items-center gap-8 sm:flex">
-          {["Showcase", "Process", "Stack"].map((item) => (
+          {[
+            { label: "Work", href: "#work" },
+            { label: "Process", href: "#process" },
+            { label: "Tools", href: "#stack" },
+          ].map((item) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               className="text-base font-medium text-neutral-400 transition hover:text-white"
             >
-              {item}
+              {item.label}
             </a>
           ))}
         </div>

@@ -18,8 +18,8 @@ const FEATURES = [
         <path d="M3 12a9 3 0 0 0 18 0" />
       </svg>
     ),
-    title: "Data that arrives ready to use.",
-    desc: "Every system speaks a different language. We write transformation logic in JavaScript and Python that cleans, reformats, and structures your data so it lands exactly where it needs to in exactly the right shape.",
+    title: "Every system connected.",
+    desc: "QuickBooks, Slack, Asana, Outlook, custom APIs \u2014 we build the integrations that move data between your tools automatically. No more copy-pasting between tabs or waiting on someone to update a spreadsheet.",
   },
   {
     icon: (

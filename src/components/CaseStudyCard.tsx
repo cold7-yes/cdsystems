@@ -103,7 +103,7 @@ export function CaseStudyCard({ caseStudy }: Props) {
         {caseStudy.toolsUsed && caseStudy.toolsUsed.length > 0 && (
           <div className="mt-auto border-t border-neutral-800 pt-4">
             <div className="flex flex-wrap gap-1.5">
-              {caseStudy.toolsUsed.map((tool) => (
+              {caseStudy.toolsUsed.slice(0, 4).map((tool) => (
                 <span
                   key={tool}
                   className={`rounded-md border px-2 py-0.5 text-xs font-medium ${getTagColor(tool)}`}
@@ -111,6 +111,11 @@ export function CaseStudyCard({ caseStudy }: Props) {
                   {tool}
                 </span>
               ))}
+              {caseStudy.toolsUsed.length > 4 && (
+                <span className="rounded-md border border-neutral-700 bg-neutral-800 px-2 py-0.5 text-xs font-medium text-neutral-400">
+                  +{caseStudy.toolsUsed.length - 4} more
+                </span>
+              )}
             </div>
           </div>
         )}

@@ -31,7 +31,9 @@ export function FinalCTA() {
             <div className="flex items-center gap-5">
               <div className="text-3xl font-medium text-white">$0</div>
               <a
-                href={`mailto:${CONTACT_EMAIL}?subject=Project%20Consultation`}
+                href="https://calendly.com/cdean-brand33/30min"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-lg bg-white px-8 py-3.5 text-base font-medium text-black transition hover:bg-neutral-200"
               >
                 Book Now

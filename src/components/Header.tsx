@@ -36,7 +36,9 @@ export function Header() {
           ))}
         </div>
         <a
-          href="#contact"
+          href="https://calendly.com/cdean-brand33/30min"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition hover:bg-neutral-200"
         >
           Book a Call

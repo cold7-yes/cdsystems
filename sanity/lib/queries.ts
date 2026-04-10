@@ -16,6 +16,22 @@ export const caseStudiesQuery = groq`
   }
 `;
 
+export const caseStudyBySlugQuery = groq`
+  *[_type == "caseStudy" && slug.current == $slug][0] {
+    _id,
+    name,
+    "slug": slug.current,
+    result,
+    clientName,
+    industry,
+    problem,
+    whatWasBuilt,
+    toolsUsed,
+    status,
+    thumbnail
+  }
+`;
+
 export const testimonialsQuery = groq`
   *[_type == "testimonial"] | order(coalesce(order, 9999) asc, _createdAt desc) {
     _id,

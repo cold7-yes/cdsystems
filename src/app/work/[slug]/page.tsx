@@ -154,9 +154,13 @@ export default async function CaseStudyPage({
                 <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.15em] text-neutral-500">
                   The Problem
                 </h2>
-                <p className="text-lg leading-relaxed text-neutral-300">
-                  {cs.problem}
-                </p>
+                <div className="space-y-4">
+                  {cs.problem.split("\n").filter(Boolean).map((para, i) => (
+                    <p key={i} className="text-lg leading-relaxed text-neutral-300">
+                      {para}
+                    </p>
+                  ))}
+                </div>
               </section>
             )}
 
@@ -165,9 +169,13 @@ export default async function CaseStudyPage({
                 <h2 className="mb-4 text-xs font-medium uppercase tracking-[0.15em] text-neutral-500">
                   What We Built
                 </h2>
-                <p className="text-lg leading-relaxed text-neutral-300">
-                  {cs.whatWasBuilt}
-                </p>
+                <div className="space-y-4">
+                  {cs.whatWasBuilt.split("\n").filter(Boolean).map((para, i) => (
+                    <p key={i} className="text-lg leading-relaxed text-neutral-300">
+                      {para}
+                    </p>
+                  ))}
+                </div>
               </section>
             )}
 

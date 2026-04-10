@@ -81,7 +81,7 @@ export default async function CaseStudyPage({
   if (!cs) notFound();
 
   const thumb = cs.thumbnail?.asset
-    ? urlFor(cs.thumbnail).width(1600).height(800).fit("crop").url()
+    ? urlFor(cs.thumbnail).width(1600).fit("max").url()
     : null;
 
   return (
@@ -132,13 +132,14 @@ export default async function CaseStudyPage({
 
         {/* Thumbnail */}
         {thumb && (
-          <div className="relative mb-16 aspect-[2/1] w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900">
+          <div className="relative mb-16 w-full overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900">
             <Image
               src={thumb}
               alt={cs.thumbnail?.alt ?? cs.name}
-              fill
+              width={1600}
+              height={800}
               sizes="(min-width: 1024px) 960px, 100vw"
-              className="object-cover"
+              className="h-auto w-full object-contain"
               priority
             />
           </div>

@@ -21,7 +21,7 @@ export function Header() {
             <WorkflowIcon />
           </div>
           <span className="text-base font-medium tracking-tight text-white">
-            COLD THREE THREE
+            CD STUDIO
           </span>
         </Link>
         <div className="hidden items-center gap-8 sm:flex">

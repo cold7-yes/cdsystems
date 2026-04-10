@@ -3,7 +3,6 @@ import {
   caseStudiesQuery,
   type CaseStudy,
 } from "../../sanity/lib/queries";
-import { AuraBackground } from "../components/AuraBackground";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
 import { CaseStudies } from "../components/CaseStudies";
@@ -30,7 +29,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen">
-      <AuraBackground />
       <Header />
       <main>
         <Hero />

@@ -85,9 +85,9 @@ export default async function CaseStudyPage({
     : null;
 
   return (
-    <div className="min-h-screen bg-[#050505]">
+    <div className="min-h-screen">
       {/* Nav */}
-      <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#050505]/80 backdrop-blur-md">
+      <nav className="fixed top-0 z-50 w-full border-b border-white/5 bg-black/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link
             href="/"

@@ -11,9 +11,9 @@ export function Hero() {
           Now taking on new clients
         </div>
         <h1 className="mb-8 text-5xl font-medium leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
-          Stop running your agency.{" "}
+          Before you hire your next person,{" "}
           <br className="hidden sm:block" />
-          <span className="text-neutral-500">Start growing it.</span>
+          <span className="text-neutral-500">automate the job.</span>
         </h1>
         <p className="mx-auto mb-12 max-w-3xl text-lg font-light leading-relaxed text-neutral-400 sm:text-2xl">
           We automate the manual work so your team can take on more clients, deliver faster, and scale without hiring.

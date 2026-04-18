@@ -8,7 +8,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Complex logic, handled.",
-    desc: "Most automation tools break the moment things get complex. We write custom JavaScript and Python inside our workflows to handle conditional branching, loops, and real error handling so edge cases don\u2019t become your problem.",
+    desc: "Client work isn't linear. Revision cycles, approval gates, multi-client routing. We handle the edge cases that off-the-shelf tools trip over.",
   },
   {
     icon: (
@@ -19,7 +19,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Every system connected.",
-    desc: "CRMs, accounting software, project management tools, email, custom APIs. We build the integrations that move data between your systems automatically. No more copy-pasting between tabs or waiting on someone to update a spreadsheet.",
+    desc: "HubSpot, Asana, Notion, Monday, Google Drive, Slack, Figma. We build the integrations that keep work moving without anyone chasing an update or copy-pasting between tabs.",
   },
   {
     icon: (
@@ -29,7 +29,7 @@ const FEATURES = [
       </svg>
     ),
     title: "Your data stays yours",
-    desc: "We run on self-hosted n8n instances or locked-down cloud environments. Nothing passes through systems you don\u2019t control.",
+    desc: "We run on self-hosted instances or locked-down cloud environments. Your client lists, briefs, and deliverables never pass through systems you don't control.",
   },
 ];
 

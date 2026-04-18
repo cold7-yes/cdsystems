@@ -12,10 +12,10 @@ export function CaseStudies({ caseStudies }: Props) {
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
             <h2 className="mb-4 text-4xl font-medium tracking-tight text-white">
-              Featured Workflows
+              Client Work
             </h2>
             <p className="max-w-md text-base text-neutral-400">
-              A collection of production-ready automations integrating AI agents, APIs, CRMs, and custom webhooks.
+              Production-ready automations from client onboarding to deliverable handoff.
             </p>
           </div>
         </div>

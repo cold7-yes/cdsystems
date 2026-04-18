@@ -8,7 +8,7 @@ export function Hero() {
             className="inline-block h-2 w-2 rounded-full bg-green-500"
             style={{ animation: "pulse-dot 2s infinite" }}
           />
-          Built for creative agencies
+          Now taking on new clients
         </div>
         <h1 className="mb-8 text-5xl font-medium leading-[1.1] tracking-tight text-white sm:text-7xl lg:text-8xl">
           Less time on admin.{" "}
@@ -16,7 +16,7 @@ export function Hero() {
           <span className="text-neutral-500">More time on what grows the business.</span>
         </h1>
         <p className="mx-auto mb-12 max-w-3xl text-lg font-light leading-relaxed text-neutral-400 sm:text-2xl">
-          We build custom automations for branding, marketing, and design agencies. Your team spends less time on operations and more time on the work clients actually pay for.
+          Custom automations, built end-to-end for growing creative agencies.
         </p>
         <a
           href="#work"
